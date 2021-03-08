@@ -1,0 +1,441 @@
+@import '__mixins';
+
+$openSansFont: 'Open Sans', sans-serif;
+
+$buttonColor: #4487ff;
+$backColor: #F3F6FB;
+$fontColor: #FF6752;
+
+@font-face
+{
+    font-family: "museo-sans-rounded-700";
+    src: url("../fonts/MuseoSansRounded700.otf");
+
+}
+
+@font-face
+{
+    font-family: "segoeUI";
+    src: url("../fonts/SegoeUI.ttf");
+}
+
+@font-face
+{
+    font-family: "segoeUI-bold";
+    src: url("../fonts/Segoe\ UI\ Bold.ttf");
+}
+
+@media (min-width: 0px)
+{
+
+    *
+    {
+        margin:0;
+        padding: 0;
+        
+    }
+
+    a
+    {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    ul
+    {
+        list-style-type: none;
+    }
+
+    body
+    {
+        position: relative;
+        background-color: $backColor;
+        overflow-x: hidden;
+    }
+
+    header
+    {
+        position: relative;
+    }
+
+    nav
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 24px;
+        align-items: center;
+
+    .nav-list
+    {
+        display: none;
+
+        ul
+        {
+            display: flex;
+            font-family: $openSansFont;
+        }
+    }
+    }
+    
+    .background-1
+    {
+        position: absolute;
+        top: -192.6470947265625px;
+        left: -327.5439453125px;
+        width: 1312px;
+        height: 721px;
+        background: transparent url('../assets/group108.png') 0% 0% no-repeat padding-box;
+    }
+
+    .background-2
+    {
+        top: 864px;
+        left: -807.9994506835938px;
+        width: 1548px;
+        height: 1079px;
+        // transform: matrix(0.99, 0.16, -0.16, 0.99, 0, 0);
+        background: transparent url('../assets/Group114.png') 0% 0% no-repeat padding-box;
+        position: absolute;
+        z-index: -1;
+
+    }
+
+    .hamburger
+    {
+        display: flex;
+        flex-direction: column;
+        width: 18.67px;
+        height: 16px;
+        position: relative;
+        cursor: pointer;
+
+        .hamburger_child1
+        {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+            box-shadow: 0px calc(16px/2 - 1px) 0px 0px #ffffff;
+        }
+
+        .hamburger_child2
+        {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+        }
+    }
+
+ 
+
+    
+
+    .header-introduction
+    {
+        margin: 45px 0 0 24px;
+        h1
+        {
+            font-family: "museo-sans-rounded-700";
+            font-size: 38px;
+            color: #ffffff;
+        }
+
+        p
+        {
+            margin-top: 10px;
+            font-family: "SegoeUI";
+            font-size: 14px;
+            width: 85%;
+            color: #ffffff;
+        }
+
+        button
+        {
+            background-color: $buttonColor;
+            border: none;
+            border-radius: 38px;
+            font-family: $openSansFont;
+            font-weight: 700;
+            color: #ffffff;
+            box-shadow: 0px 3px 6px #2C1DAD29;
+            height: 60px;
+            width: 192px;
+            font-size: 14px;
+            margin-top: 23px;
+            cursor: pointer;
+        }
+
+    }
+
+    .dog-circle
+    {
+        position: relative;
+        width: 100%;
+        margin-top: 120px;
+
+        .circle
+        {
+            background-color: #FFE530;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            position: absolute;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            clip-path: circle(90% at 50% 0);
+
+
+            .dog
+            {
+                background-image: url(../assets/golden.png);
+                width: 249px;
+                height: 415px;
+            }
+        }
+    }
+
+    section.services
+    {
+        margin-top: 500px;
+        font-family: "segoeUI-bold";
+        margin-left: 24px;
+        margin-right: 24px;
+        font-size: 22px;
+        font-weight: 700;
+        color: $fontColor;
+
+        p.first-desc
+        {
+            font-family: "segoeUI";
+            font-size: 14px;
+            color: #808080;
+            font-weight: 400;
+            margin-top: 10px;
+            width: 70%;
+        }
+
+        p.second-desc
+        {
+            font-size: 16px;
+            margin-top: 28px;
+            width: 75%;
+        }
+
+        div.input-wrapper
+        {
+            width: 244px;
+            height: 67px;
+            border-radius: 40px;
+            background-color: #ffffff;
+            margin-left: -10px;
+            margin-top: 18px;
+            position: relative;
+            display: flex;
+
+            input
+            {
+                width: 100%;
+                height: 100%;
+                border-radius: 40px;
+                border: none;
+                box-shadow: 0px 3px 6px #00000029;
+                font-family: "segoeUI";
+                font-size: 16px;
+                box-sizing: border-box;
+                opacity: 0.8;
+                padding: 0 80px 0 30px;
+            }
+
+            .arrow
+            {
+                width: 53px;
+                height: 53px;
+                border-radius: 50%;
+                background-color: $fontColor;
+                position: absolute;
+                align-self: center;
+                right: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 3px 6px #FD68454D;
+            }
+
+            .arrow::before
+            {
+                content: "";
+                background-image: url(../assets/group46.png);
+                width: 27px;
+                height: 14px;
+            }
+        }
+
+        .services-grid
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 50px;
+
+            &__square
+            {
+                width: 145px;
+                height: 145px;
+                box-shadow: 0px 3px 6px #00000029;
+                border-radius: 20px;
+                background-color: #ffffff;
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                &__desc
+                {
+                    font-size: 14px;
+                    font-family: "segoeUI";
+                    color: #707070;
+                    font-weight: 400;
+                }
+
+                &__img1
+                {
+                    width: 47px;
+                    height: 47px;
+                    background-image: url(../assets/dog.png);
+                    margin-bottom: 20px;
+                }
+
+                &__img2
+                {
+                    width: 41px;
+                    height: 47px;
+                    background-image: url(../assets/cat.png);
+                    margin-bottom: 20px;
+                }
+
+                &__img3
+                {
+                    width: 47px;
+                    height: 47px;
+                    background-image: url(../assets/dogshome.png);
+                    margin-bottom: 20px;
+                }
+
+                &__img4
+                {
+                    width: 47px;
+                    height: 41px;
+                    background-image: url(../assets/dogsarm.png);
+                    margin-bottom: 20px;
+                }
+            }
+
+        }
+        
+        
+    }
+
+ 
+}
+
+
+@media (min-width: 1000px)
+{
+    .nav-list
+    {
+        display: flex;
+    }
+
+    .hamburger
+    {
+        display: none;
+    }
+
+    .background-1
+    {
+        top: -496.4848327636719px;
+        left: -350.400390625px;
+        width: 2669px;
+        height: 1466px;
+        background: transparent url("../assets/group76.png") 0% 0% no-repeat padding-box;
+
+    }
+
+    nav
+    {
+        padding: 27px 94px 27px 140px;
+        .nav-list
+        {
+            font-size: 24px;
+            display: flex;
+            align-self: flex-start;
+            margin-top: 13px;
+
+            ul
+            {
+                li
+                {
+                    margin: 0 20px;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+
+    .header-introduction
+    {
+        margin: 240px 0 0 140px;
+        h1
+        {
+            font-size: 84px;
+        }
+
+        p
+        {
+            font-size: 24px;
+            width: 35%;
+            margin-top: 20px;
+        }
+
+        button
+        {
+            width: 239px;
+            height: 75px;
+            font-size: 20px;
+            margin-top: 55px;
+        }
+
+    }
+
+    .dog-circle
+    {
+        // position: relative;
+        // width: 100%;
+        // margin-top: 120px;
+
+        .circle
+        {
+            width: 546px;
+            height: 546px;
+            bottom: -80px;
+            right: 120px;
+            clip-path: circle(90% at 50% 0);
+
+
+            .dog
+            {
+                background-image: url(../assets/golden-big.png);
+                width: 497px;
+                height: 829px;
+            }
+        }
+    }
+
+
+}
