@@ -1,0 +1,173 @@
+@mixin owner-rectangle
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 296px;
+    height: 340px;
+    background-image: url(../assets/Group139.png);
+    border-radius: 20px;
+    background-position: center;
+    margin: 0 8px;
+    box-shadow: 0px 3px 6px #3220CE80;
+
+    &__avatar
+                {
+                    width: 59px;
+                    height: 59px;
+                    margin-top: 50px;
+
+                    img
+                    {
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+
+    &__name
+                {
+                    font-family: "segoeUI-bold";
+                    font-size: 18px;
+                    color: #ffffff;
+                    margin-top: 15px;
+                }
+
+    &__desc
+                {
+                    color: #ffffff;
+                    font-family: "segoeUI";
+                    font-size: 14px;
+                    text-align: center;
+                    margin-top: 25px;
+                    width: 85%;
+                    opacity: 0.8;
+
+                }
+
+    @media (min-width: 1000px)
+    {
+        margin-top: 55px;
+        width: 552px;
+        height: 326px;
+        background-image: url(../assets/Group141.png);
+        position: absolute;
+
+        &:nth-child(1)
+        {
+            left: 0;
+        }
+
+        &:nth-child(3)
+        {
+            right: 0;
+        }
+
+        &__avatar
+                {
+                    width: 86px;
+                    height: 86px;
+                    margin-top: 38px;
+
+                }
+
+        &__name
+                {
+                    font-size: 23px;
+                    margin-top: 7px;
+                }
+
+        &__desc
+                {
+                    font-size: 24px;
+                    font-size: 18px;
+
+                }
+                
+    }
+    
+}
+
+@mixin input-mixin
+{
+    div.input-wrapper
+        {
+            width: 244px;
+            height: 67px;
+            border-radius: 40px;
+            background-color: #ffffff;
+            margin-left: -10px;
+            margin-top: 18px;
+            position: relative;
+            display: flex;
+
+            input
+            {
+                width: 100%;
+                height: 100%;
+                border-radius: 40px;
+                border: none;
+                box-shadow: 0px 3px 6px #00000029;
+                font-family: "segoeUI";
+                font-size: 16px;
+                box-sizing: border-box;
+                opacity: 0.8;
+                padding: 0 80px 0 30px;
+            }
+
+            .arrow
+            {
+                width: 53px;
+                height: 53px;
+                border-radius: 50%;
+                background-color: $fontColor;
+                position: absolute;
+                align-self: center;
+                right: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 3px 6px #FD68454D;
+                cursor: pointer;
+            }
+
+            .arrow::before
+            {
+                content: "";
+                background-image: url(../assets/group46.png);
+                width: 27px;
+                height: 14px;
+            }
+        }
+
+    @media (min-width: 1000px)
+    {
+        div.input-wrapper
+        {
+            width: 293px;
+            height: 80px;
+            margin-left: 0;
+            margin-top: 24px;
+            input
+            {
+                font-size: 24px;
+                padding-left: 35px;
+            }
+
+            .arrow
+            {
+                width: 64px;
+                height: 64px;
+                right: 7px;
+
+            }
+
+            .arrow::before
+            {
+
+                background-image: url(../assets/g25.png);
+                width: 29px;
+                height: 14px;
+            }
+        }
+    }
+}
